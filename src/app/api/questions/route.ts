@@ -6,7 +6,7 @@ export async function GET() {
   const shuffledQuestions = questions.sort(() => 0.5 - Math.random());
   const selectedQuestions = shuffledQuestions.slice(
     0,
-    parseInt(process.env.NO_OF_QUESTIONS || '10')
+    parseInt(process.env.NO_OF_QUESTIONS || '20')
   );
 
   return NextResponse.json(selectedQuestions);
